@@ -1,29 +1,28 @@
 const Oceans = require('./oceans');
 
-describe('oceans', () => {
+describe('ocean', () => {
 
     describe('Hemesphere', () => {
         it('contains Hemesphere', () => {
-            const oceans = new Oceans({
+            const ocean = new Oceans({
                 Flora: 'Seaweed', 
                 Fauna: 'Shark',
                 Name: 'Atlantic'
             }); 
 
-            const { errors } = oceans.validateSync(); 
-            console.log(errors);
-            expect(errors.oceans.message).toEqual('Path `Hemesphere` is required.');
+            const { errors } = ocean.validateSync(); 
+            expect(errors.Hemesphere.message).toEqual('Path `Hemesphere` is required.');
         }); 
 
         it('Name should be a string', () => {
-            const oceans = new Oceans({
+            const ocean = new Oceans({
                 Hemesphere: 'Southern',
                 Flora: 'Seaweed', 
                 Fauna: 'Shark',
-                Name: 12
+                Name: []
             }); 
-            const { errors } = oceans.validateSync(); 
-            expect(errors.oceans.message).toEqual('Cast to String failed for value "12" at path "oceans"'); 
+            const { errors } = ocean.validateSync(); 
+            expect(errors.Name.message).toEqual('Cast to String failed for value "[]" at path "Name"'); 
         });
     });
 });

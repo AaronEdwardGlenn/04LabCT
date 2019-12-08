@@ -11,8 +11,7 @@ describe('Lake', () => {
             }); 
 
             const { errors } = lake.validateSync(); 
-            console.log(errors);
-            expect(errors.lake.message).toEqual('Path `Location` is required.');
+            expect(errors.Location.message).toEqual('Path `Location` is required.');
         }); 
 
         it('Name should be a string', () => {
@@ -23,7 +22,7 @@ describe('Lake', () => {
                 Name: {}
             }); 
             const { errors } = lake.validateSync(); 
-            expect(errors.lake.message).toEqual('Cast to String failed for value "{}" at path "lake"'); 
+            expect(errors.Name.message).toEqual('Cast to String failed for value "{}" at path "Name"'); 
         });
     });
 });

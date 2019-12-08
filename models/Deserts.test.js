@@ -11,8 +11,7 @@ describe('Desert', () => {
             }); 
 
             const { errors } = desert.validateSync(); 
-            console.log(errors);
-            expect(errors.desert.message).toEqual('Path `Temperature` is required.');
+            expect(errors.Temperature.message).toEqual('Path `Temperature` is required.');
         }); 
 
         it('Temp should be a number', () => {
@@ -23,7 +22,7 @@ describe('Desert', () => {
                 Name: 'Death Valley'
             }); 
             const { errors } = desert.validateSync(); 
-            expect(errors.desert.message).toEqual('Cast to Number failed for value "Fifty" at path "desert"'); 
+            expect(errors.Temperature.message).toEqual('Cast to Number failed for value "Fifty" at path "Temperature"'); 
         });
     });
 });

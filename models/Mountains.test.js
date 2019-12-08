@@ -11,8 +11,7 @@ describe('mountian', () => {
             }); 
 
             const { errors } = mountian.validateSync(); 
-            console.log(errors);
-            expect(errors.mountian.message).toEqual('Path `Elevation` is required.');
+            expect(errors.Elevation.message).toEqual('Path `Elevation` is required.');
         }); 
 
         it('Name should be a string', () => {
@@ -23,7 +22,7 @@ describe('mountian', () => {
                 Examples: []
             }); 
             const { errors } = mountian.validateSync(); 
-            expect(errors.mountian.message).toEqual('Cast to String failed for value "[]" at path "mountian"'); 
+            expect(errors.Examples.message).toEqual('Cast to String failed for value "[]" at path "Examples"'); 
         });
     });
 });
