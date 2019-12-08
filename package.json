@@ -1,0 +1,26 @@
+{
+  "name": "04labct",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --verbose",
+    "test:watch": "npm run test -- --watchAll --coverage"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AaronEdwardGlenn/04LabCT.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AaronEdwardGlenn/04LabCT/issues"
+  },
+  "homepage": "https://github.com/AaronEdwardGlenn/04LabCT#readme",
+  "dependencies": {
+    "mongoose": "^5.7.14"
+  }
+}
