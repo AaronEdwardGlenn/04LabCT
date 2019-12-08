@@ -1,6 +1,6 @@
 const mongoose = require('mongoose'); 
 
-const schema = new mongoose.schema({
+const schema = new mongoose.Schema({
     Location: {
         type: String, 
         required: true

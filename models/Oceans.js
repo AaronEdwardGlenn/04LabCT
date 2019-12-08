@@ -1,8 +1,8 @@
 const mongoose = require('mongoose'); 
 
-const schema = new mongoose.schema({
-    Elevation: {
-        type: Number, 
+const schema = new mongoose.Schema({
+    Hemesphere: {
+        type: String, 
         required: true
     },
     Flora: {
